@@ -1,25 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import Formbox from './components/Formbox';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <Navbar /> */}
+      <Navbar title="TextEditor" aboutEditor="About Us" />
+
+      <div className="container my-3">
+        <Formbox heading="Enter Your Text below " />
+      </div>
+
+
+
+
+    </>
   );
 }
 
-export default App;
+export default App;  
