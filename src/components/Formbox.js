@@ -12,31 +12,48 @@ export default function Formbox(props) {
     const handalUpCase = () => {
         const newText = text.toUpperCase()
         setText(newText);
+        props.showAlerts("Text Converted To UpperCase!", "success");
 
-        props.showAlerts("Text Converted To UpperCase!", "success")
+        if (text.length === 0) {
+            props.showAlerts("First Enter Your text !", "warning")
+        }
     }
 
     const handalLowCase = () => {
         const newText = text.toLowerCase()
         setText(newText);
-        props.showAlerts("Text Converted To LowerCase!", "success")
+        props.showAlerts("Text Converted To LowerCase!", "success");
+
+        if (text.length === 0) {
+            props.showAlerts("First Enter Your text !", "warning")
+        }
     }
 
     const handalClear = () => {
         setText("");
-        props.showAlerts("Text Box Clean!", "success")
+        props.showAlerts("Text Box Clean!", "success");
+
     }
 
     const handalCoppy = () => {
         let coppytext = document.getElementById("myBox");
         coppytext.select();
         navigator.clipboard.writeText(coppytext.value);
-        props.showAlerts("Text Copied!", "success")
+        props.showAlerts("Text Copied!", "success");
+
+        if (text.length === 0) {
+            props.showAlerts("First Enter Your text !", "warning")
+        }
     }
+
     const handalExtraSpaces = () => {
         let newText = text.split(/[ ]+/)
         setText(newText.join(" "));
-        props.showAlerts("Extra Spaces Are Removed!", "success")
+        props.showAlerts("Extra Spaces Are Removed!", "success");
+
+        if (text.length === 0) {
+            props.showAlerts("First Enter Your text !", "warning")
+        }
     }
 
     return (
