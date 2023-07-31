@@ -11,26 +11,32 @@ export default function Formbox(props) {
 
     const handalUpCase = () => {
         const newText = text.toUpperCase()
-        setText(newText)
+        setText(newText);
+
+        props.showAlerts("Text Converted To UpperCase!", "success")
     }
 
     const handalLowCase = () => {
         const newText = text.toLowerCase()
-        setText(newText)
+        setText(newText);
+        props.showAlerts("Text Converted To LowerCase!", "success")
     }
 
     const handalClear = () => {
-        setText("")
+        setText("");
+        props.showAlerts("Text Box Clean!", "success")
     }
 
     const handalCoppy = () => {
         let coppytext = document.getElementById("myBox");
         coppytext.select();
         navigator.clipboard.writeText(coppytext.value);
+        props.showAlerts("Text Copied!", "success")
     }
     const handalExtraSpaces = () => {
         let newText = text.split(/[ ]+/)
-        setText(newText.join(" "))
+        setText(newText.join(" "));
+        props.showAlerts("Extra Spaces Are Removed!", "success")
     }
 
     return (
