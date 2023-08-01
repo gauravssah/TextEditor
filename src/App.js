@@ -10,7 +10,7 @@ import Alerts from './components/Alerts';
 function App() {
 
   const [mode, setMode] = useState("light");
-
+  const [modeText, setModeText] = useState("Enable Dark Mode");
   const [alert, setAlerts] = useState(null);
 
   let showAlerts = (message, type) => {
@@ -25,18 +25,35 @@ function App() {
   }
 
   let togglemode = () => {
-    if (mode == "light") {
+    if (mode === "light") {
       setMode("dark");
+      setModeText("Disable Dark Mode")
       document.body.style.backgroundColor = "black";
       showAlerts("Dark Mode Enabled", "success");
 
     } else {
       setMode("light");
+      setModeText("Enable light Mode")
       document.body.style.backgroundColor = "white";
       showAlerts("Light Mode Enabled", "success")
     }
   }
 
+  let custubMode = (event) => {
+    let currentColor = event.target.id;
+    setMode(currentColor);
+    document.body.style.backgroundColor = currentColor;
+    showAlerts("Custum Mode Enabled!", currentColor);
+
+    console.log(event.target)
+
+    if (event.target.id === "warning") {
+      document.body.style.backgroundColor = "#241c0b";
+    } else {
+      document.body.style.backgroundColor = "#0f310f";
+    }
+
+  }
 
 
 
@@ -44,11 +61,11 @@ function App() {
 
   return (
     <>
-      <Navbar title="TextEditor" aboutEditor="About Us" mode={mode} togglemode={togglemode} />
+      <Navbar title="TextEditor" aboutEditor="About Us" mode={mode} togglemode={togglemode} custubMode={custubMode} modeText={modeText} />
       <Alerts alert={alert} />
 
       <div className="container my-3">
-        <Formbox heading="Enter Your Text below " mode={mode} showAlerts={showAlerts} />
+        <Formbox heading="Enter Your Text below " mode={mode} showAlerts={showAlerts} custubMode={custubMode} />
 
         {/* <About /> */}
       </div>
