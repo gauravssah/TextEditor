@@ -5,6 +5,7 @@ import Formbox from './components/Formbox';
 import About from './components/About';
 import React, { useState } from 'react'
 import Alerts from './components/Alerts';
+import { toBeChecked } from '@testing-library/jest-dom/matchers';
 
 
 function App() {
@@ -45,12 +46,19 @@ function App() {
     document.body.style.backgroundColor = currentColor;
     showAlerts("Custum Mode Enabled!", currentColor);
 
-    console.log(event.target)
-
     if (event.target.id === "warning") {
       document.body.style.backgroundColor = "#241c0b";
     } else {
       document.body.style.backgroundColor = "#0f310f";
+    }
+
+    let checkBox = document.getElementById("flexSwitchCheckDefault")
+
+    if (checkBox.checked) {
+      setModeText("Enable Light. Mode")
+    } else {
+
+      setModeText("Enable Dark Mode")
     }
 
   }
