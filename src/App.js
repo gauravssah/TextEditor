@@ -52,15 +52,6 @@ function App() {
       document.body.style.backgroundColor = "#0f310f";
     }
 
-    let checkBox = document.getElementById("flexSwitchCheckDefault")
-
-    if (checkBox.checked) {
-      setModeText("Enable Light. Mode")
-    } else {
-
-      setModeText("Enable Dark Mode")
-    }
-
   }
 
 
@@ -73,9 +64,9 @@ function App() {
       <Alerts alert={alert} />
 
       <div className="container my-3">
-        <Formbox heading="Enter Your Text below " mode={mode} showAlerts={showAlerts} custubMode={custubMode} />
+        {/* <Formbox heading="Enter Your Text below " mode={mode} showAlerts={showAlerts} custubMode={custubMode} /> */}
 
-        {/* <About /> */}
+        <About mode={mode} showAlerts={showAlerts} custubMode={custubMode} togglemode={togglemode} />
       </div>
 
 

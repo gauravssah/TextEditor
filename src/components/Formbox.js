@@ -67,7 +67,7 @@ export default function Formbox(props) {
                 <div className={`btn btn-${props.mode === "light" ? "primary" : props.mode} mx-1 my-1 `} onClick={handalUpCase}>ToUpperCase</div>
                 <div className={`btn btn-${props.mode === "light" ? "primary" : props.mode} mx-1 my-1 `} onClick={handalLowCase}>ToLowerCase</div>
                 <div className={`btn btn-${props.mode === "light" ? "primary" : props.mode} mx-1 my-1 `} onClick={handalClear}>Clear Text</div>
-                <div className={`btn btn-${props.mode === "light" ? "primary" : props.mode} mx-1 my-1 `} onClick={handalCoppy}>Coppy Text</div>
+                <div className={`btn btn-${props.mode === "light" ? "primary" : props.mode} mx-1 my-1 `} onClick={handalCoppy}>Copy  Text</div>
                 <div className={`btn btn-${props.mode === "light" ? "primary" : props.mode} mx-1 my-1 `} onClick={handalExtraSpaces}>Remove Extra Spaces</div>
 
             </div>

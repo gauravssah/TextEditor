@@ -9,7 +9,7 @@ export default function Alerts(props) {
 
 
     return (
-        props.alert && <div className={`alert alert-${props.alert.type} alert-dismissible fade show w-100 position-absolute`} role="alert">
+        props.alert && <div className={`alert alert-${props.alert.type} alert-dismissible fade show w-100 z-3 position-absolute`} role="alert">
             <strong> {textCaptlize(props.alert.type)}: </strong> {props.alert.msg}
         </div>
     )
