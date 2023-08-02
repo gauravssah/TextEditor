@@ -1,11 +1,11 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Navbar from './components/Navbar';
 import Formbox from './components/Formbox';
 import About from './components/About';
 import React, { useState } from 'react'
 import Alerts from './components/Alerts';
-import { toBeChecked } from '@testing-library/jest-dom/matchers';
+// import { toBeChecked } from '@testing-library/jest-dom/matchers';
 
 
 function App() {
