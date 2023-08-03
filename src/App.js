@@ -72,6 +72,7 @@ function App() {
             {/* <About mode={mode} showAlerts={showAlerts} custubMode={custubMode} togglemode={togglemode} /> */}
 
             <Route path='/' element={<Formbox heading="Enter Your Text below " mode={mode} showAlerts={showAlerts} custubMode={custubMode} />} />
+            <Route path='/texteditor' element={<Formbox heading="Enter Your Text below " mode={mode} showAlerts={showAlerts} custubMode={custubMode} />} />
             <Route path='/home' element={<Formbox heading="Enter Your Text below " mode={mode} showAlerts={showAlerts} custubMode={custubMode} />} />
             <Route path='/about' element={<About mode={mode} showAlerts={showAlerts} custubMode={custubMode} togglemode={togglemode} />} />
 
