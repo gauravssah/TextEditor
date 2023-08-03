@@ -60,7 +60,7 @@ function App() {
   return (
     <>
 
-      <BrowserRouter basename='TextEditor'>
+      <BrowserRouter>
 
         <Navbar title="TextEditor" aboutEditor="About Us" mode={mode} togglemode={togglemode} custubMode={custubMode} modeText={modeText} />
         <Alerts alert={alert} />
