@@ -36,7 +36,7 @@ export default function About(props) {
                 <div className={`accordion-item bg-${props.mode} text-${props.mode === "dark" ? "light" : "dark"}`}>
                     <h2 className="accordion-header" id="headingOne">
                         <button className={`accordion-button bg-${props.mode} text-${props.mode === "dark" ? "light" : "dark"}`} type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            1. User-Friendly Text Manipulation:
+                            <strong>1. User-Friendly Text Manipulation:</strong>
                         </button>
                     </h2>
                     <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -48,7 +48,7 @@ export default function About(props) {
                 <div className={`accordion-item bg-${props.mode} text-${props.mode === "dark" ? "light" : "dark"}`}>
                     <h2 className="accordion-header" id="headingTwo">
                         <button className={`accordion-button collapsed bg-${props.mode} text-${props.mode === "dark" ? "light" : "dark"}`} type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            2. Enhanced Text Cleanup and Organization:
+                            <strong>2. Enhanced Text Cleanup and Organization:</strong>
                         </button>
                     </h2>
                     <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
@@ -60,7 +60,7 @@ export default function About(props) {
                 <div className={`accordion-item bg-${props.mode} text-${props.mode === "dark" ? "light" : "dark"}`}>
                     <h2 className="accordion-header" id="headingThree">
                         <button className={`accordion-button collapsed bg-${props.mode} text-${props.mode === "dark" ? "light" : "dark"}`} type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            3. Seamless Copying and Clearing of Text:
+                            <strong>3. Seamless Copying and Clearing of Text:</strong>
                         </button>
                     </h2>
                     <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
