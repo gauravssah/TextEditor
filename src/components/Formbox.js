@@ -80,7 +80,7 @@ export default function Formbox(props) {
 
             <div className="container  p-3" style={{ color: `${props.mode === "light" ? "black" : "white"}`, border: "1px solid gray", borderRadius: "10px" }}>
                 <h3>Preview</h3>
-                <p>{text.length > 0 ? text : "Enter Your Text To Above Box And Preview Here."}</p>
+                <p>{text.length > 0 ? text : "Nothing to Preview."}</p>
             </div>
 
 
