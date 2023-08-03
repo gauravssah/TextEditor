@@ -1,4 +1,3 @@
-
 import './App.css';
 import Navbar from './components/Navbar';
 import Formbox from './components/Formbox';
@@ -6,7 +5,7 @@ import About from './components/About';
 import React, { useState } from 'react'
 import Alerts from './components/Alerts';
 // import { toBeChecked } from '@testing-library/jest-dom/matchers';
-
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 function App() {
 
@@ -34,7 +33,7 @@ function App() {
 
     } else {
       setMode("light");
-      setModeText("Enable light Mode")
+      setModeText("Enable Dark Mode")
       document.body.style.backgroundColor = "white";
       showAlerts("Light Mode Enabled", "success")
     }
@@ -60,17 +59,28 @@ function App() {
 
   return (
     <>
-      <Navbar title="TextEditor" aboutEditor="About Us" mode={mode} togglemode={togglemode} custubMode={custubMode} modeText={modeText} />
-      <Alerts alert={alert} />
 
-      <div className="container my-3">
-        {/* <Formbox heading="Enter Your Text below " mode={mode} showAlerts={showAlerts} custubMode={custubMode} /> */}
+      <BrowserRouter>
 
-        <About mode={mode} showAlerts={showAlerts} custubMode={custubMode} togglemode={togglemode} />
-      </div>
+        <Navbar title="TextEditor" aboutEditor="About Us" mode={mode} togglemode={togglemode} custubMode={custubMode} modeText={modeText} />
+        <Alerts alert={alert} />
+
+        <div className="container my-4">
+
+          <Routes>
+            {/* <Formbox heading="Enter Your Text below " mode={mode} showAlerts={showAlerts} custubMode={custubMode} /> */}
+            {/* <About mode={mode} showAlerts={showAlerts} custubMode={custubMode} togglemode={togglemode} /> */}
+
+            <Route path='/' element={<Formbox heading="Enter Your Text below " mode={mode} showAlerts={showAlerts} custubMode={custubMode} />} />
+            <Route path='/home' element={<Formbox heading="Enter Your Text below " mode={mode} showAlerts={showAlerts} custubMode={custubMode} />} />
+            <Route path='/about' element={<About mode={mode} showAlerts={showAlerts} custubMode={custubMode} togglemode={togglemode} />} />
+
+          </Routes>
+
+        </div>
 
 
-
+      </BrowserRouter>
 
     </>
   );
