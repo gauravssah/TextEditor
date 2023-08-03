@@ -57,9 +57,9 @@ export default function Formbox(props) {
     }
 
     return (
-        <div className="my-5" style={{ color: `${props.mode === "light" ? "black" : "white"}` }} >
-            <h1>{props.heading}</h1>
-            <div className="mb-3">
+        <div className="" style={{ color: `${props.mode === "light" ? "black" : "white"}`, marginTop: "4rem" }} >
+            <h1 className="mb-4">{props.heading}</h1>
+            <div className="mb-4">
                 <textarea className={`form-control bg-${props.mode} text-${props.mode === "light" ? "dark" : "light"}`} value={text} onChange={handalOnChnage} id="myBox" rows="10"></textarea>
             </div>
 
